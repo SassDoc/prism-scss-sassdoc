@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <link href="http://prismjs.com/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+  <pre class="language-scss"><code>/**
+ * Description.
+ *
+ * @access private
+ * @throws An exception.
+ * @todo Write some code maybe?
+ * @see %hello
+ * @see $world
+ * @see some-function
+ * @see {mixin} baz
+ * @returns {Map} A random map.
+ * @group Helpers &amp; dirty hacks
+ * @link http://sassdoc.com/
+ *
+ * @example scss
+ *   $bar: foo('bar');
+ */
+ @function foo($bar) {}
+
+/// @author Foo Bar &lt;foo@bar.com&gt;
+/// @deprecated Some message <http://messages.can/contain#links>
+/// @type Bool | Map
+/// @prop {String} world (!) - A description.
+/// @prop nested - Nested map (something).
+/// @prop {String | Bool} nested.foo (bar) Stuff.
+///
+/// @example
+///   An example!
+$hello: (
+  world: '!',
+  nested: (
+    foo: 'bar'
+  )
+);
+
+/**
+ * @content Content.
+ * @ignore This does nothing anyway.
+ * @since 1.0 Useless feature.
+ */
+%some-mixin {
+  @content;
+}
+</code></pre>
+  <script src="http://prismjs.com/prism.js"></script>
+  <script src="http://prismjs.com/components/prism-css.js"></script>
+  <script src="http://prismjs.com/components/prism-scss.js"></script>
+  <script src="prism-scss-sassdoc.js"></script>
+</body>
+</html>
