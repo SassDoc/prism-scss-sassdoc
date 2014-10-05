@@ -5,5 +5,5 @@ all:
 shot: screenshot.png
 
 screenshot.png: example.html
-	if [ ! -d node_modules/webshot ]; then npm install webshot; fi
-	echo "require('webshot')('file://$(PWD)/$<', '$@', {shotSize: {width: 552, height: 'all'}}, function (e) {if (e) throw e;});" | $(NODE)
+	if [ ! -d node_modules/webshot-cli ]; then npm install webshot-cli; fi
+	node_modules/webshot-cli/webshot --shot-size=552/all $< $@
