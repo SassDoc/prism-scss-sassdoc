@@ -1,7 +1,10 @@
-`prism-scss-sassdoc`
-====================
+prism-scss-sassdoc
+==================
 
-> SassDoc comments highlighting for Prism.
+> [SassDoc] comments highlighting for [Prism].
+
+[SassDoc]: http://sassdoc.com/
+[Prism]: http://prismjs.com/
 
 Overview
 --------
