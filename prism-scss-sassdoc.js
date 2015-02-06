@@ -50,7 +50,7 @@
           pattern: /@(param|arg(ument)?|prop|requires|see)( .*|\r?\n|$)/g,
           inside: {
             'default': {
-              pattern: RegExp('^(' + _annotation + '(\\s+' + _type + ')?\\s+' + _param + ')\\s+\\([^\\)]+\\)', 'gi'),
+              pattern: RegExp('^(' + _annotation + '(\\s+' + _type + ')?\\s+' + _param + ')\\s+\\[[^\\)]+\\]', 'gi'),
               lookbehind: true,
               alias: 'string'
             },
