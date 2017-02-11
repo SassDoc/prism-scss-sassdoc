@@ -1,32 +1,34 @@
+/* global Prism */
+
 (function () {
-  var _annotation = '@\\w+';
+  var _annotation = '@\\w+'
 
   // Match an annotation
   var annotation = {
     pattern: RegExp('^' + _annotation, 'gi'),
     alias: 'atrule'
-  };
+  }
 
-  var _type = '{[^}]+}';
+  var _type = '{[^}]+}'
 
   // Match a type (always following an annotation)
   var type = {
     pattern: RegExp('^(' + _annotation + ')\\s+' + _type, 'gi'),
     lookbehind: true,
     alias: 'string'
-  };
+  }
 
-  var _param = '[\\$%]?[\\w\\._-]+';
+  var _param = '[\\$%]?[\\w\\._-]+'
 
   // Match a param (always following an annotation and optionally a type)
   var param = {
     pattern: RegExp('^(' + _annotation + '(\\s+' + _type + ')?)\\s+' + _param, 'gi'),
     lookbehind: true,
     alias: 'variable'
-  };
+  }
 
   // Match a delimited URL
-  var url = /<[^>]+>/g;
+  var url = /<[^>]+>/g
 
   Prism.languages.insertBefore('scss', 'comment', {
     'docblock': {
@@ -111,8 +113,8 @@
             'annotation': annotation,
             'url': url
           }
-        },
+        }
       }
     }
-  });
-}());
+  })
+}())
